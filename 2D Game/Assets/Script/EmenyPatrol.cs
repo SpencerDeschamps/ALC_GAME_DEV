@@ -32,11 +32,11 @@ public class EmenyPatrol : MonoBehaviour {
 
 		if (MoveRight){
 			transform.localScale = new Vector3(-0.2f,0.2f,1f);
-			GetComponent<RigidBody2D>().velocity = new Vector2(MoveSpeed, GetComponent<RigidBody2D>().velocity.y);
+			GetComponent<Rigidbody2D>().velocity = new Vector2(MoveSpeed, GetComponent<Rigidbody2D>().velocity.y);
 		}
 		else {
 			transform.localScale = new Vector3(0.2f,0.2f,1f);
-			GetComponent<RigidBody2D>().velocity = new Vector2(-MoveSpeed, GetComponent<RigidBody2D>().velocity.y);
+			GetComponent<Rigidbody2D>().velocity = new Vector2(-MoveSpeed, GetComponent<Rigidbody2D>().velocity.y);
 		}
 	}
 }
