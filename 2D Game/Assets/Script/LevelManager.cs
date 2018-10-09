@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class levelManaager : MonoBehaviour {
+public class LevelManager : MonoBehaviour {
 
 	public GameObject CurrentCheckPoint;
-	private Rigidbody2D PC;
+	public Rigidbody2D PC;
 
 	// particles
 	public GameObject DeathParticle;
@@ -22,7 +22,7 @@ public class levelManaager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		PC = FindObjectOfType<Rigidbody2D> ();
+		// PC = FindObjectOfType<Rigidbody2D> ();
 	}
 
 public void RespawnPlayer(){
@@ -31,10 +31,10 @@ public void RespawnPlayer(){
 
 public IEnumerator RespawnPlayerCo(){
 	// Generate death particle
-	Instantiate (DeathParticle, PC.transform.position, PC,transform,rotation);
+	Instantiate (DeathParticle, PC.transform.position, PC.transform.rotation);
 	//hide pc
 	// PC.enabled = false;
-	PC.GetComponent<Render> ().enabled = false;
+	PC.GetComponent<Renderer> ().enabled = false;
 	// gravity reset
 	GravityStore = PC.GetComponent<Rigidbody2D>().gravityScale;
 	PC.GetComponent<Rigidbody2D>().gravityScale = 0f;
@@ -51,7 +51,7 @@ public IEnumerator RespawnPlayerCo(){
 	PC.transform.position = CurrentCheckPoint.transform.position;
 	//show pc
 	//PC.enabled = true;
-	PC.GetComponent<Render> ().enabled = true;
+	PC.GetComponent<Renderer> ().enabled = true;
 	//Spawn PC
 	Instantiate (RespawnParticle, CurrentCheckPoint.transform.position,CurrentCheckPoint.transform.rotation);
 }

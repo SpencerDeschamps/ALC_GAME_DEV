@@ -1,19 +1,20 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
+﻿using UnityEngine;
+using System.Collections;
 public class KillPlayer : MonoBehaviour {
+public LevelManager LevelManager;
+// Use this for initialization
+void Start () {
+LevelManager = FindObjectOfType <LevelManager>();
+}
+// Update is called once per frame
+void Update () {
+}
 
-	public LevelManager LevelManager;
-
-	// Use this for initialization
-	void Start () {
-		LevelManager = FindObjectOfType <LevelManager>();		
-	}
-	
-	void OnTriggerEnter2D(Collider2D other){
-		if(other.name == "PC"){
-			LevelManager.RespawnPlayer();
+void OnTriggerEnter2D(Rigidbody2D other){
+if(other.name == "PC"){
+	print ("player has entered enemy trigger");
+LevelManager.CurrentCheckPoint = gameObject;
 		}
+
 	}
 }
