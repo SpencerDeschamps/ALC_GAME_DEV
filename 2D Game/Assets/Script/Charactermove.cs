@@ -58,6 +58,13 @@ public class Charactermove : MonoBehaviour {
 
 	GetComponent<Rigidbody2D>().velocity = new Vector2(MoveVelocity, GetComponent<Rigidbody2D>().velocity.y);
 
+	// player flip
+	if (GetComponent<Rigidbody2D>().velocity.x >0)
+		transform.localScale = new Vector3(3f, 3f, 1f);
+
+	else if (GetComponent<Rigidbody2D>().velocity.x <0)
+		transform.localScale = new Vector3(-3f, 3f, 1f);
+
 }
 	// Use this for initialization
 	void Start () {
