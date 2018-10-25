@@ -306,13 +306,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 63724761}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.22220032, y: -0.021999931, z: 0}
+  m_LocalRotation: {x: -0, y: 0.016638067, z: -0, w: 0.99986166}
+  m_LocalPosition: {x: -0.22220033, y: -0.021999931, z: 0.000000067055225}
   m_LocalScale: {x: 2.1962886, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 240123217}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 1.9070001, z: 0}
 --- !u!224 &85699253 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224512495057677430, guid: 6eb6a50d8a15e4d13b4d3cf6e4e21bb8,
@@ -3211,6 +3211,7 @@ GameObject:
   - component: {fileID: 1852751342}
   - component: {fileID: 1852751341}
   - component: {fileID: 1852751340}
+  - component: {fileID: 1852751344}
   m_Layer: 0
   m_Name: Projectile
   m_TagString: Untagged
@@ -3253,7 +3254,7 @@ MonoBehaviour:
   PC: {fileID: 2010806690}
   EnemyDeath: {fileID: 2002255996}
   ProjectileParticle: {fileID: 1873619431}
-  PointsForKill: 10
+  PointsForKill: 25
 --- !u!212 &1852751342
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3306,12 +3307,37 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1852751339}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.87, y: 0.004, z: 0.070355535}
+  m_LocalPosition: {x: 5.46, y: -7.46, z: 0.070355535}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1852751344
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1852751339}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.2, y: 0.2}
+    newSize: {x: 0.2, y: 0.2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.2, y: 0.2}
+  m_EdgeRadius: 0
 --- !u!1 &1865281401
 GameObject:
   m_ObjectHideFlags: 0
