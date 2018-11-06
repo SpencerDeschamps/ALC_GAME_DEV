@@ -1779,7 +1779,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &1381661316
 RectTransform:
@@ -2380,11 +2380,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd5f88e90203f41848b56695b9d90443, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 50
+  Speed: 40
   PC: {fileID: 2010806690}
   EnemyDeath: {fileID: 2002255996}
   ProjectileParticle: {fileID: 1873619431}
-  PointsForKill: 25
+  PointsForKill: 100
 --- !u!212 &1852751342
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2923,7 +2923,7 @@ MonoBehaviour:
   DeathParticle: {fileID: 2002255996}
   RespawnParticle: {fileID: 1873619431}
   RespawnDelay: 1
-  PointPenaltyOnDeath: 25
+  PointPenaltyOnDeath: 150
 --- !u!114 &2010806696
 MonoBehaviour:
   m_ObjectHideFlags: 0
