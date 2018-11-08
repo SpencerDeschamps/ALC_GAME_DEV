@@ -39,7 +39,7 @@ public class Charactermove : MonoBehaviour {
 		if(grounded)
 		DoubleJump = false;
 
-		if(Input.GetKeyDown (KeyCode.Space)&& !DoubleJump && !grounded){
+		if(Input.GetKeyDown (KeyCode.W)&& !DoubleJump && !grounded){
 			Jump();
 			DoubleJump = true;
 		}
